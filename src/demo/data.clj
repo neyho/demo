@@ -13,19 +13,19 @@
 (def alice {:euuid alice-euuid
             :name "alice"
             :active true
-            :password "demo123"})
+            :password "password"})
 (def bob {:euuid bob-euuid
           :name "bob"
           :active true
-          :password "demo123"})
+          :password "password"})
 (def charlie {:euuid charlie-euuid
               :name "charlie"
               :active true
-              :password "demo123"})
+              :password "password"})
 (def diana {:euuid diana-euuid
             :name "diana"
             :active true
-            :password "demo123"})
+            :password "password"})
 
 (def users [alice bob charlie diana])
 
@@ -55,16 +55,14 @@
    :name "Project Alpha"
    :description "Alice's flagship project"
    :active true
-   :project_owner {:euuid alice-euuid}
-   :members [{:euuid charlie-euuid}]})
+   :project_owner {:euuid alice-euuid}})
 
 (def project-beta
   {:euuid project-beta-euuid
    :name "Project Beta"
    :description "Bob's innovation project"
    :active true
-   :project_owner {:euuid bob-euuid}
-   :members [{:euuid charlie-euuid}]})
+   :project_owner {:euuid bob-euuid}})
 
 (def projects [project-alpha project-beta])
 
@@ -82,7 +80,7 @@
   {:euuid alpha-task-1-euuid
    :title "Alpha Task 1 - Setup Infrastructure"
    :description "Initial infrastructure setup"
-   :status :IN_PROGRESS
+   :status :In_Progress
    :assignee {:euuid alice-euuid}
    :project {:euuid project-alpha-euuid}})
 
@@ -90,7 +88,7 @@
   {:euuid alpha-task-2-euuid
    :title "Alpha Task 2 - Implement Feature X"
    :description "Core feature implementation"
-   :status :TODO
+   :status :ToDo
    :assignee {:euuid charlie-euuid}
    :project {:euuid project-alpha-euuid}})
 
@@ -98,7 +96,7 @@
   {:euuid alpha-task-3-euuid
    :title "Alpha Task 3 - Code Review"
    :description "Team code review"
-   :status :TODO
+   :status :ToDo
    :assignee_group {:euuid engineering-euuid}
    :project {:euuid project-alpha-euuid}})
 
@@ -106,7 +104,7 @@
   {:euuid beta-task-1-euuid
    :title "Beta Task 1 - Design System"
    :description "Design the system architecture"
-   :status :IN_PROGRESS
+   :status :In_Progress
    :assignee {:euuid bob-euuid}
    :project {:euuid project-beta-euuid}})
 
@@ -114,7 +112,7 @@
   {:euuid beta-task-2-euuid
    :title "Beta Task 2 - Build Prototype"
    :description "Build working prototype"
-   :status :TODO
+   :status :ToDo
    :assignee {:euuid charlie-euuid}
    :project {:euuid project-beta-euuid}})
 
