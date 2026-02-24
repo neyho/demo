@@ -2,5 +2,6 @@
 .cpcache/
 .lsp/
 .DS_STORE
-.CLAUDE.md
+CLAUDE.md
+.claude/
 eywa.edn
