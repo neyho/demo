@@ -23,9 +23,38 @@ Diana is the **key demo case** - she proves RLS works across dataset boundaries.
 
 ### Prerequisites
 
-1. EYWA server running on `localhost:8080`
-2. Datasets deployed: `Project_Management` and `Resource_Planning`
-3. Demo data loaded (users, projects, tasks, allocations)
+#### 1. Install EYWA CLI
+
+**Linux / macOS:**
+```bash
+curl -s https://s3.eu-central-1.amazonaws.com/eywa.cli/install_eywa_cli.sh | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+Invoke-WebRequest -Uri "https://s3.eu-central-1.amazonaws.com/eywa.cli/install_eywa_cli.ps1" -OutFile eywa_cli_install.ps1
+./eywa_cli_install.ps1
+```
+
+> For detailed installation instructions, see the [EYWA Documentation](https://neyho.github.io/eywa/overview)
+
+#### 2. EYWA Server Running
+
+Ensure EYWA server is running on `localhost:8080` with:
+- Datasets deployed: `Project_Management` and `Resource_Planning`
+- Demo data loaded (users, projects, tasks, allocations)
+
+#### 3. Connect to EYWA (per user)
+
+Before starting a user REPL, connect to EYWA from that user's folder:
+
+```bash
+cd repl/alice
+eywa connect http://localhost:8080
+# Complete the device code flow - login as alice/password
+```
+
+This authenticates and stores tokens in the local `eywa.edn` file.
 
 ### Running User REPLs
 
